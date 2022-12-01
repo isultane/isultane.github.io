@@ -1,3 +1,6 @@
-# isultane.github.io
-My personal website
-testing update
+# My personal website
+See more info at https://isultane.github.io/
+
+
+  
+  
