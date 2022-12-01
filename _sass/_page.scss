@@ -56,12 +56,12 @@
   }
 
   p, li, dl {
-    font-size: 1.1em;
+    font-size: 1em;
   }
 
   /* paragraph indents */
   p {
-    margin: $indent-var;
+    margin: 0 0 $indent-var;
 
     /* sibling indentation*/
     @if $paragraph-indent == true {
@@ -73,7 +73,7 @@
   }
 
   a {
-    text-decoration: none;
+    text-decoration: underline;
 
     &:hover {
       text-decoration: underline;
@@ -398,8 +398,4 @@
   margin-bottom: 10px;
   font-size: $type-size-6;
   text-transform: uppercase;
-}
-
-.archive__item .venue_info{
-	font-weight:bold;
 }

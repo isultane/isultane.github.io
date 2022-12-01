@@ -37,62 +37,28 @@
     {% if post.read_time %}
       <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
     {% endif %}
-	
-	{% if post.authors %}
-      <p>&nbsp;<i class="fa fa-user"></i>&nbsp;{{ " "| append: post.authors  |  markdownify | remove: '<p>' | remove: '</p>' }}</p>
-	{% endif %}
-    
-    {% if post.venue_key and post.date %}
-	  {% assign venue = site.data.venues[post.venue_key] %}
-	  
 
+        {% if post.collection == 'teaching' %}
+          <p> {{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
+        {% elsif post.collection == 'publications' %}
+          <p>Published in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
+        {% elsif post.date %}
+         <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">{{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
+        {% endif %}
+
+    {% if post.excerpt and site.read_more != 'enabled' %}
+    <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>
+    {% elsif post.excerpt and site.read_more == 'enabled' %}
+    <p class="archive__item-excerpt" itemprop="description"><p>{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}<strong><a href="{{ base_path }}{{ post.url }}" rel="permalink"> Read more</a></strong></p></p>
     {% endif %}
-	
-    <p class="archive_link_info">
-		&nbsp;<i class="fa fa-info-circle"></i>&nbsp;
-		{% if post.track %}
-			{{ post.track }}, 
-	    {% endif %}
-		{% if post.volume %}
-			{{ post.volume }}, 
-	    {% endif %}
-		{% if post.pages %}
-			pp. {{ post.pages }}, 
-	    {% endif %}
-		{% if post.date %}
-		<b>{{ post.date | default: "1900-01-01" | date: "%Y" }}</b>
-	    {% endif %}
-	  
-		 {% if post.paperurl %} - [ 
-		  <a href="{{ post.paperurl }}" target="_blank">pdf</a>
-		  {% if post.package %}
-		   / <a href="{{ post.package }}" target="_blank">package</a>
-		  {% endif %}
-		  {% if post.doiurl %}
-		   / <a href="{{ post.doiurl }}" target="_blank">doi</a>
-		  {% endif %}
-		  ]
-		{% endif %}
-	
-	</p>
-    
-	
-    {% if post.notes %}
-    <p>{{ post.notes |  markdownify }}</p>
-    {% endif %}
-	
-    {% if post.distinction %}
-    <p>&nbsp;<i class="fa fa-trophy"></i>&nbsp;<span style="color:#c00000;font-weight:bold;">{{ post.distinction }}</span></p>
-    {% endif %}
-	
     
     {% if post.citation and post.paperurl %}
       <p>Recommended citation: {{ post.citation }} <a href="{{ post.paperurl }}"><u>{{ post.paperurl }}</u></a></p>
     {% elsif post.citation %}
       <p>Recommended citation: {{ post.citation }} </p>
+    {% elsif post.paperurl %}
+      <p>Download <a href=" {{ post.paperurl }} "><u>here</u></a></p>
     {% endif %}
-	
-	
 
   </article>
 </div>

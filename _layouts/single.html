@@ -33,56 +33,15 @@ layout: default
         {% if page.modified %}
           <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time></p>
         {% endif %}
-		        
-		{% if page.authors %}
-		  <p>&nbsp;<i class="fa fa-user"></i>&nbsp;{{ " "| append: page.authors  |  markdownify | remove: '<p>' | remove: '</p>' }}</p>
-		{% endif %}
-		
-        {% if page.venue_key and page.date %}
-		  {% assign venue = site.data.venues[page.venue_key] %}
-		  
-
-		{% endif %}
         
-		<p class="archive_link_info">
-		 {% if page.paperurl %}
-		&nbsp;<i class="fa fa-info-circle"></i>&nbsp;
-	    {% endif %}
-		{% if page.track %}
-			{{ page.track }}, 
-	    {% endif %}
-		{% if page.volume %}
-			{{ page.volume }}, 
-	    {% endif %}
-		{% if page.pages %}
-			pp. {{ page.pages }}, 
-	    {% endif %}
-		{% if page.date %}
-		<b>{{ page.date | default: "1900-01-01" | date: "%Y" }}</b>
-	    {% endif %}
-	  
-		 {% if page.paperurl %} - [ 
-		  <a href="{{ page.paperurl }}" target="_blank">pdf</a>
-		  {% if page.package %}
-		   / <a href="{{ page.package }}" target="_blank">package</a>
-		  {% endif %}
-		  {% if page.doiurl %}
-		   / <a href="{{ page.doiurl }}" target="_blank">doi</a>
-		  {% endif %}
-		  ]
-		{% endif %}
-	
-	</p>
-    
-	
-    {% if page.notes %}
-    <p>{{ page.notes |  markdownify }}</p>
-    {% endif %}
-	
-    {% if page.distinction %}
-    <p>&nbsp;<i class="fa fa-trophy"></i>&nbsp;<span style="color:#c00000;font-weight:bold;">{{ page.distinction }}</span></p>
-    {% endif %}
-			
+        {% if page.collection == 'teaching' %}
+          <p> {{ page.type }}, <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
+        {% elsif page.venue and page.date %}
+          <p>Published in <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
+        {% elsif page.date %}
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
+        {% endif %}
+        
              
         {% if page.citation and page.paperurl %}
           <p>Recommended citation: {{ page.citation }} <a href="{{ page.paperurl }}"><u>{{ page.paperurl }}</u></a></p>
