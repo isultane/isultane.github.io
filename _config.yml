@@ -83,9 +83,10 @@ author:
   name             : "Sultan Alqahtani"
   avatar           : "profile.png"
   bio              : "Assistant Professor at Imam University"
-  location         : "Riyadh - KSA"
+  location         : #"Riyadh - KSA"
   employer         :
   pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  dblp             : "https://dblp.org/pid/28/8398.html"
   googlescholar    : "https://scholar.google.com/citations?user=kcBvCc0AAAAJ&hl=en"
   email            :
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
@@ -113,7 +114,7 @@ author:
   vine             :
   weibo            :
   xing             :
-  youtube          : "UCEtT94G3vtBPj8Y4ycDTUTg"
+  youtube          : #"UCEtT94G3vtBPj8Y4ycDTUTg"
   wikipedia        :
 
 
