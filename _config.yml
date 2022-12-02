@@ -85,7 +85,7 @@ author:
   bio              : "Assistant Professor at Imam University"
   location         : #"Riyadh - KSA"
   employer         :
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   dblp             : "https://dblp.org/pid/28/8398.html"
   googlescholar    : "https://scholar.google.com/citations?user=kcBvCc0AAAAJ&hl=en"
   email            :
