@@ -13,7 +13,7 @@ Education
 ======
 * B.S. in Computer Science, Imam University, 2007
 * M.S. in Computer Science (Major. Information Security), Concordia Universiy, 2012
-* Ph.D in Computer Science (Major. Software Engineering), thesis title: “Enhancing Trust –A Unified Meta-Model for  oftware Security Vulnerability Analysis”, Concordia University, 2018
+* Ph.D in Computer Science (Major. Software Engineering and Security), Concordia University, 2018
 
 Work experience
 ======
