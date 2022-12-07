@@ -11,9 +11,9 @@ redirect_from:
 
 Education
 ======
-* B.S. in GitHub, GitHub University, 2012
-* M.S. in Jekyll, GitHub University, 2014
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
+* B.S. in Computer Science, Imam University, 2007
+* M.S. in Computer Science (Major. Information Security), Concordia Universiy, 2012
+* Ph.D in Computer Science (Major. Software Engineering), thesis title: “Enhancing Trust –A Unified Meta-Model for  oftware Security Vulnerability Analysis”, Concordia University, 2018
 
 Work experience
 ======
