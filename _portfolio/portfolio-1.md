@@ -4,4 +4,4 @@ excerpt: "Short description of portfolio item number 1<br/><img src='/images/vrt
 collection: portfolio
 ---
 
-This is an item in your portfolio. It can be have images or nice text. If you name the file .md, it will be parsed as markdown. If you name the file .html, it will be parsed as HTML. 
+The VrT tool is a machine learning-based tool that uses the fasttext algorithm from Meta AI to accurately tag and classify vulnerability reports. With an average accuracy of 70-80%, the tool is highly effective at identifying the Top 25 Common Weakness Enumeration (CWE) vulnerabilities, which are considered the most dangerous and critical to address. The VrT tool is trained on the National Vulnerability Database (NVD) and can be used by organizations to quickly and efficiently prioritize their vulnerability management efforts and ensure that their systems are protected against the most serious threats.
