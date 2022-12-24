@@ -1,6 +1,6 @@
 ---
 title: "Portfolio item number 1"
-excerpt: "Short description of portfolio item number 1<br/><img src='/images/vrt_image.png'>"
+excerpt: "machine learning-based tool that uses the fasttext algorithm from Meta AI to accurately tag and classify vulnerability reports <br/><img src='/images/vrt_image.png'>"
 collection: portfolio
 ---
 
