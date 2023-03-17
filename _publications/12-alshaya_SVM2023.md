@@ -11,11 +11,11 @@ pages: "1-4"
 date: 2023-05-17
 doiurl: 
 
-paperurl: TBC
+paperurl: ./files/svm2023_vrt tool.pdf
 notes:
 ---
 
-**Abstract:** Abstract— vulnerability reports play an important role in
+**Abstract:** vulnerability reports play an important role in
 the software maintenance domain. Disclosing vulnerabilities
 that attackers can exploit depends on the time of mitigating that
 software vulnerability. The information on vulnerability reports
