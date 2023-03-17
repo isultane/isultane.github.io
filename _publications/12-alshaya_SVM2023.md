@@ -11,7 +11,7 @@ pages: "1-4"
 date: 2023-05-17
 doiurl: 
 
-paperurl: ./files/svm2023_vrt_tool.pdf
+paperurl: /files/svm2023_vrt_tool.pdf
 notes:
 ---
 
